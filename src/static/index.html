@@ -86,19 +86,23 @@
                     <div id="audio-visualizer"></div>
                 </div>
             </div>
-            <div id="video-container">
-                <video id="preview" playsinline autoplay muted></video>
-                <div class="video-controls">
-                    <button id="stop-video">停止视频</button>
-                    <button id="flip-camera">
-                        <span class="material-symbols-outlined">flip_camera_ios</span>
-                    </button>
-                </div>
+        </div>
+        
+        <!-- 视频容器移到外面，这样可以正常显示 -->
+        <div id="video-container" style="display: none;">
+            <video id="preview" playsinline autoplay muted></video>
+            <div class="video-controls">
+                <button id="stop-video">停止视频</button>
+                <button id="flip-camera">
+                    <span class="material-symbols-outlined">flip_camera_ios</span>
+                </button>
             </div>
-            <div id="screen-container">
-                <video id="screen-preview" playsinline autoplay muted></video>
-                <button class="close-button material-symbols-outlined">close</button>
-            </div>
+        </div>
+        
+        <!-- 屏幕共享容器也移到外面 -->
+        <div id="screen-container" style="display: none;">
+            <video id="screen-preview" playsinline autoplay muted></video>
+            <button class="close-button material-symbols-outlined">close</button>
         </div>
     </div>
     <script type="module" src="js/main.js"></script>

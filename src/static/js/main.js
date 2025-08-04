@@ -491,7 +491,7 @@ connectButton.addEventListener('click', () => {
 messageInput.disabled = true;
 sendButton.disabled = true;
 micButton.disabled = true;
-connectButton.textContent = 'Connect';
+connectButton.textContent = '连接';
 
 /**
  * Handles the video toggle. Starts or stops video streaming.
@@ -610,3 +610,9 @@ function stopScreenSharing() {
 
 screenButton.addEventListener('click', handleScreenShare);
 screenButton.disabled = true;
+
+// 为屏幕共享关闭按钮添加事件监听器
+const screenCloseButton = document.querySelector('#screen-container .close-button');
+if (screenCloseButton) {
+    screenCloseButton.addEventListener('click', stopScreenSharing);
+}
